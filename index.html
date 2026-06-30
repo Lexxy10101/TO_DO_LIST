@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Connection with the CSS styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Connection with icons -->
+    <script src="https://kit.fontawesome.com/e8da7cc551.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- The header of the website -->
+    <header>
+            <h1> Junior Frontend Developer </h1>
+            <h1>  Iacob Andreea-Mihaela </h1>
+            
+    </header>
+    
+    <!-- This is the primary container for the new lists created -->
+    <div class="container">
+        <h1 class="containerTitle">TO DO LIST</h1>
+        <button class="btnCreateNewList"><i class="fa-solid fa-plus"></i> New List</button>
+         <div class="listsContainer"></div>
+    </div>
+    <!-- This is the modal window for the new list button -->
+    <div class="modalWindow-overlay hidden">
+        <div class="modalWindow">
+            <h2>New List</h2>
+            <input class="newListName" type="text" placeholder="Enter the list name">
+            <div class="modalWindowBtn">
+                <button class="btnCancelList">Cancel</button>
+                <button class="btnCreateList">Create List</button>
+            </div>
+        </div> 
+    </div>
+    <!-- This is the modal window for the clicked lists tasks-->
+    <div class="taskModalWindow hidden">
+        <button class="btnBack"><i class="fa-solid fa-arrow-left"></i></button>
+        <h2 class="taskModalTitle"></h2>
+        
+        <div class="taskInputContainer">
+            <input class="newTaskName" type="text" placeholder="Enter a new task...">
+            <button class="btnCreateTask"><i class="fa-solid fa-plus"></i></button>
+        </div>
+
+        <div class="tasksContainer"></div>
+    </div>
+
+    <!-- Connection with the JS code -->
+    <script src="script.js"></script>
+</body>
+</html>

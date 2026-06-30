@@ -1,0 +1,227 @@
+/* GLOBAL STYLES */
+body {
+    background: #dffff7;
+    /* Applied globally so all child elements inherit this font automatically */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: .5;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+/* Styles applied for the primary container with the new lists created */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-left: 30px;
+    height: auto;
+    min-height: 500px;
+    background: #06141B;
+    color: #CCD0CF;
+}
+
+/* Styles applied to the new list button */
+.btnCreateNewList {
+    width: 150px;
+    border-radius: 10px;
+    height: 35px;
+    font-size: 1.2rem;
+    background: #CCD0CF;
+    color: #11212D;
+    border: none;
+    font-weight: 600;
+}
+
+/* Styles applied to each list card created */
+.listCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #11212D;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #CCD0CF;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.listCard:hover {
+    background: #1A3144; 
+}
+
+/* Delete button inside the main list card */
+.btnDeleteListMain {
+    background: none;
+    border: none;
+    color: #CCD0CF;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.btnDeleteListMain:hover {
+    color: #ff4d4d; 
+}
+
+/* Styles applied to the modal window overlay of the new list button */
+.modalWindow-overlay {
+    position: fixed;   
+    top: 0;
+    left: 0;
+    width: 100vw;     
+    height: 100vh;     
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    z-index: 1;
+}
+
+/* Styles applied to the modal window content box */
+.modalWindow {
+    background-color: #2c3e50; 
+    padding: 25px;
+    border-radius: 10px;
+    color: #CCD0CF;
+    width: 90%;          
+    max-width: 400px;    
+    height: auto;        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.newListName {
+    width: 100%;
+    height: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    box-sizing: border-box; 
+}
+
+.modalWindowBtn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.modalWindowBtn button {
+    width: 120px; 
+    padding: 5px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles applied to the modal window of the list tasks */
+.taskModalWindow {
+    background: #253745; 
+    width: 65%;
+    height: 350px; 
+    position: absolute;
+    left: 20vh;
+    top: 150px;
+    color: #CCD0CF;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); 
+}
+
+/* Back button inside the task modal view */
+.btnBack {
+    border-radius: 10px;
+    width: 60px;
+    border: none;
+    background: none;
+    color: #CCD0CF;
+    cursor: pointer;
+}
+
+.taskModalTitle {
+    color: rgb(199, 169, 0);
+}
+
+.taskInputContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px auto;
+    width: 80%;
+}
+
+.newTaskName {
+    flex: 1;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.btnCreateTask {
+    background: #CCD0CF;
+    color: #11212D;
+    border: none;
+    width: 40px;
+    height: 32px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btnCreateTask:hover {
+    background: #9ba0a0;
+}
+
+/* Styles applied to the div created in JS for the tasks added on the list */
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #11212D;
+    padding: 8px 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 5px;
+    color: #CCD0CF;
+}
+
+/* Styles applied to the div created in JS for the buttons that exist in that div */
+.taskActions button {
+    background: none;
+    border: none;
+    color: #CCD0CF;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.btnDeleteTask:hover {
+    color: #ff4d4d;
+}
+    
+/* Utility class to hide elements; placed at the bottom to override other display properties */
+.hidden {
+    display: none !important;
+}
